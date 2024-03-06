@@ -1,0 +1,84 @@
+.App {
+  background-color: #282c34;
+  min-height: 100vh;
+}
+
+.App-header {
+  background-color: #282c34;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  border: orange 1.5px solid;
+  border-radius: 9px;
+  height: 80px;
+}
+
+.Add-Task {
+  margin: 70px 20px;;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+.Add-task-section {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+}
+
+.Add-task-input {
+  border-radius: 3px;
+  background-color: #282c34;
+  margin: 6px;
+  border: orange 1.5px solid;
+  width: auto;
+  height: 30px;
+  color: white;
+}
+
+.Task-section {
+  margin: 70px 20px;
+  color: white;
+  height: 250px;
+  border: orange 1.5px solid;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  border-radius: 2px;
+}
+
+.App-header-section {
+  flex-direction: column;
+  margin-left: 25px;
+  display: flex;
+
+  h4 {
+    margin-top: 16px;
+  }
+  p {
+    margin-top: -36px;
+  }
+}
+
+.Plus-button {
+  border: orange 1.5px solid;
+  background-color: #282c34;
+  border-radius: 5px;
+  color: orange;
+  font-size: 60px;
+  height: 80px;
+  width: 70px
+}
+
+.Task-bar {
+  border: 1.5px orange solid;
+  height: 0px;
+  width: 80px;
+  border-radius: 10px;
+}
+
+.No-task-section {
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  display: flex;
+}
