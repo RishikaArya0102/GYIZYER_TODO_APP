@@ -36,6 +36,10 @@ const Todo = () => {
     const newTaskList = taskList.filter((tsk, index) => index !== clickedIndex);
     setTaskList(newTaskList);
     setDeleteTask(false);
+    setEditMode(false);
+    setTitle('');
+    setTaskInput('');
+    setClickedIndex(null);
   }
 
   const handleEdit = (index) => {
