@@ -1,6 +1,7 @@
 .App {
   background-color: #282c34;
   min-height: 100vh;
+  overflow-y: scroll;
 }
 
 .App-header {
@@ -9,20 +10,32 @@
   color: white;
   border: orange 1.5px solid;
   border-radius: 9px;
-  height: 80px;
+  min-height: 80px;
+
+  @media screen and (max-width: 600px) {
+    display: none;
+  }
 }
 
 .Add-Task {
-  margin: 70px 20px;;
+  margin: 70px 20px;
   align-items: center;
   justify-content: center;
   display: flex;
+
+  @media screen and (max-width: 600px) {
+    margin: 33px 20px;
+  }
 }
 
 .Add-task-section {
   width: 40%;
   display: flex;
   flex-direction: column;
+
+  @media screen and (max-width: 600px) {
+    width: 80%;
+  }
 }
 
 .Add-task-input {
@@ -45,6 +58,13 @@
   justify-content: center;
   display: flex;
   border-radius: 2px;
+  overflow-y: auto;
+
+  @media screen and (max-width: 600px) {
+    border: none;
+    margin: 33px 20px;
+    height: auto;
+  }
 }
 
 .App-header-section {
@@ -54,9 +74,10 @@
 
   h4 {
     margin-top: 16px;
+    margin-bottom: 8px;
   }
   p {
-    margin-top: -36px;
+    margin-top: -13px;
   }
 }
 
@@ -75,7 +96,10 @@
   height: 0px;
   width: 80px;
   border-radius: 10px;
-  width: auto;
+
+  @media screen and (max-width: 600px) {
+    width: 96px;
+  }
 }
 
 .No-task-section {
@@ -83,6 +107,30 @@
   justify-content: center;
   flex-direction: column;
   display: flex;
+
+  @media screen and (max-width: 600px) {
+    display: initial;
+
+    p {
+      margin-left: -15px;
+      font-size: 33px;
+    }
+  }
+}
+
+.button-wrapper {
+  display: flex;
+  align-items: flex-end; 
+}
+
+@media screen and (max-width: 600px) {
+  .button-wrapper {
+    flex-direction: row; 
+    align-items: center; 
+    justify-content: flex-end;
+    width: 100%; 
+    margin-top: 10px; 
+  }
 }
 
 .Todo-task {
@@ -148,171 +196,18 @@
   border: orange 1.5px solid;
   background-color: #282c34;
   border-radius: 5px;
-  color: orange;
-  font-size: 10px;
-  height: 20px;
-  width: 20px;
+  height: 23px;
+  width: 23px;
   margin-left: 7px;
 }
 
 .btn-wrapper {
   display: flex;
   margin: 12px;
-}
-
-.App {
-  background-color: #282c34;
-  min-height: 100vh;
-}
-
-.App-header {
-  background-color: #282c34;
-  font-size: calc(10px + 2vmin);
-  color: white;
-  border: orange 1.5px solid;
-  border-radius: 9px;
-  height: 80px;
-}
-
-.Add-Task {
-  margin: 70px 20px;;
-  align-items: center;
-  justify-content: center;
-  display: flex;
-}
-
-.Add-task-section {
-  width: 40%;
-  display: flex;
-  flex-direction: column;
-}
-
-.Add-task-input {
-  border-radius: 3px;
-  background-color: #282c34;
-  margin: 6px;
-  border: orange 1.5px solid;
-  width: auto;
-  height: 30px;
-  color: white;
 }
 
 .Add-task-input::placeholder {
   padding: 20px;
-}
-
-.Task-section {
-  margin: 70px;
-  color: white;
-  height: 250px;
-  width: auto;
-  border: orange 1.5px solid;
-  align-items: center;
-  justify-content: center;
-  display: flex;
-  border-radius: 2px;
-}
-
-.App-header-section {
-  flex-direction: column;
-  margin-left: 25px;
-  display: flex;
-
-  h4 {
-    margin-top: 16px;
-  }
-  p {
-    margin-top: -36px;
-  }
-}
-
-.Plus-button {
-  border: orange 1.5px solid;
-  background-color: #282c34;
-  border-radius: 5px;
-  color: orange;
-  font-size: 60px;
-  height: 80px;
-  width: 70px;
-}
-
-.Task-bar {
-  border: 1.5px orange solid;
-  height: 0px;
-  width: 80px;
-  border-radius: 10px;
-}
-
-.No-task-section {
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  display: flex;
-}
-
-.Todo-task {
-  margin: 10px;
-  justify-content: center;
-  display: flex;
-  width: 270px;
-  height: 50px;
-  border: 1px orange solid;
-  border-radius: 5px;
-}
-
-.Todo-inside-content {
-  margin-left: 10px;
-  overflow: hidden;
-  width: 180px;
-  text-overflow: ellipsis;
-}
-
-.Todo-container {
-  display: flex;
-}
-
-.Todo-text-content {
-  height: auto;
-  width: 180px;
-  display: flex;
-  flex-direction: column;
-}
-
-.info-button {
-  border: orange 1.5px solid;
-  background-color: #282c34;
-  border-radius: 5px;
-  color: orange;
-  font-size: 13px;
-  height: 23px;
-  width: 23px;
-}
-
-.delete-button {
-  margin-left: 8px;
-  border: orange 1.5px solid;
-  background-color: #282c34;
-  border-radius: 5px;
-  color: orange;
-  font-size: 13px;
-  height: 23px;
-  width: 23px;
-}
-
-.edit-button {
-  border: orange 1.5px solid;
-  background-color: #282c34;
-  border-radius: 5px;
-  color: orange;
-  font-size: 10px;
-  height: 20px;
-  width: 20px;
-  margin-left: 7px;
-}
-
-.btn-wrapper {
-  display: flex;
-  margin: 12px;
 }
 
 .delete-popup-container {
@@ -366,4 +261,8 @@
   margin-left: 6px;
   color: white;
   width: 96%;
+
+  @media screen and (max-width: 800px) {
+   width: 92%;
+  }
 }

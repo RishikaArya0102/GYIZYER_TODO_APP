@@ -102,11 +102,11 @@ const Todo = () => {
                   <div className="Todo-inside-content">{td.taskInput}</div>
                 </div>
                 <div className="btn-wrapper">
-                  {(!showOptions || clickedIndex !== index ) &&(
+                  {(!showOptions || clickedIndex !== index) && (
                     <button className="info-button" onClick={() => handleInfoClick(index)}>i</button>
                   )}
                   {showOptions && clickedIndex === index && (
-                    <>
+                    <div className="button-wrapper">
                       <img
                         src={edit}
                         className="edit-button"
@@ -121,7 +121,7 @@ const Todo = () => {
                       >
                         X
                       </button>
-                    </>
+                    </div>
                   )}
                 </div>
               </div>
